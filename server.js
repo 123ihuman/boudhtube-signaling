@@ -61,6 +61,9 @@ app.get('/test-email', async (req, res) => {
   }
 });
 
+app.get('/', (req, res) => {
+  res.json({ status: 'Signaling server is running' });
+});
 server.listen(PORT, () => {
   console.log(`Signaling server running on port ${PORT}`);
 });
